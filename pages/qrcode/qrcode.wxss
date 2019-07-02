@@ -1,0 +1,15 @@
+/* pages/qrcode/qrcode.wxss */
+.img-box {
+  text-align: center;
+}
+.img-box image {
+  width: 350rpx;
+  height: 350rpx;
+}
+canvas {
+  margin: 0 auto;
+}
+.btns {
+  display: flex;
+  justify-content: space-between
+}
