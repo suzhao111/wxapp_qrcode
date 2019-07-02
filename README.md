@@ -5,7 +5,7 @@
 见pages/qrcode
 引用了qrCode.js,见utils/qrCode.js
 
-![小程序二维码](<https://raw.githubusercontent.com/suzhao111/wxapp_qrcode/master/image/miniqrcode.jpg){:height="200px" width="200px"}
+![小程序二维码](https://raw.githubusercontent.com/suzhao111/wxapp_qrcode/master/image/miniqrcode.jpg){:height="50px" width="50px"}
 
 
 
