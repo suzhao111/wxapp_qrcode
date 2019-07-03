@@ -8,16 +8,13 @@ Page({
     setInter:''
   },
   onLoad: function (options) {
-    // 页面初始化 options为页面跳转所带来的参数
     var size = this.setCanvasSize();//动态设置画布大小
     let ct = Date.parse(new Date())
     let url = 'current_time=' + ct
     this.setData({
       st: ct
     })
-    // this.createQrCode("mycanvas", size.w, size.h);
     this.autoRefresh()
-
   },
 
   //适配不同屏幕大小的canvas
@@ -47,15 +44,15 @@ Page({
   },
 
   // 自动刷新二维码，5秒刷新一次，先生成一次，再5秒后执行一次
-  autoRefresh: function() {
-    let that = this;
-    let size = that.setCanvasSize();//动态设置画布大小
-    that.createQrCode("mycanvas", size.w, size.h) //先生成一次
-    that.data.setInter = setInterval(function () {
-      console.log('定时一次', Date.parse(new Date()))
-      that.createQrCode("mycanvas", size.w, size.h)
-    }, 5000);
-  },
+autoRefresh: function() {
+  let that = this;
+  let size = that.setCanvasSize();//动态设置画布大小
+  that.createQrCode("mycanvas", size.w, size.h) //先生成一次
+  that.data.setInter = setInterval(function () {
+    console.log('定时一次', Date.parse(new Date()))
+    that.createQrCode("mycanvas", size.w, size.h)
+  }, 5000);
+},
   // 取消自动刷新
   stopRefresh: function() {
     let that = this

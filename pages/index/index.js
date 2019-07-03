@@ -58,5 +58,10 @@ Page({
     wx.navigateTo({
       url: '../qrcode/qrcode'
     })
+  },
+  toCard: function () {
+    wx.navigateTo({
+      url: '../card/card'
+    })
   }
 })

@@ -11,4 +11,5 @@
     <text class="user-motto">{{motto}}</text>
   </view>
   <button bindtap="toQrcode">二维码生成页面</button>
+  <button bindtap="toCard">卡片翻转</button>
 </view>

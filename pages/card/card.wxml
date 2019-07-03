@@ -1,0 +1,10 @@
+<!--pages/card/card.wxml-->
+<view class="container main">
+  <view class="card card1" data-id="1" bindtap="rotateFn" animation="{{animation1}}">
+    <image src="https://cn.bing.com/th?id=OIP.DXfBBfNamAfBXlJEFavYKQHaE6&pid=Api&rs=1&p=0"></image>
+  </view>
+  <view class="card card2" data-id="2" bindtap="rotateFn" animation="{{animation2}}">
+    <image src="https://cn.bing.com/th?id=OIP.gK2kn78jlICbjchJ8-Zb1QHaE8&pid=Api&rs=1&p=0"></image>
+  </view>
+</view>
+

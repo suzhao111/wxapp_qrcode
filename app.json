@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/qrcode/qrcode"
+    "pages/qrcode/qrcode",
+    "pages/card/card"
   ],
   "window": {
     "backgroundTextStyle": "light",
