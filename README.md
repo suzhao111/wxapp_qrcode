@@ -1,13 +1,11 @@
 # wxapp_qrcode
 
-微信小程序内生成二维码，自动刷新，停止刷新等
+###微信小程序内生成二维码，自动刷新，停止刷新等
 
 见pages/qrcode
 引用了qrCode.js,见utils/qrCode.js
 
 ![小程序二维码](https://raw.githubusercontent.com/suzhao111/wxapp_qrcode/master/image/miniqrcode.jpg){:height="50px" width="50px"}
-
-
 
 进入页面后，根据当前时间自动生成二维码（图片滞后500毫秒）
 data中存储一个定时器：
@@ -54,4 +52,13 @@ stopRefresh: function() {
     clearInterval(that.data.setInter)
 },
 ```
+### 卡片翻转
+
+见pages/card
+使用了小程序中的animation动画对象，原理是在一个框内放两张卡片，一个正面，一个背面，两张卡片重叠，初始状态下，背面卡片翻转180度。
+
+- 先在data中声明两个动画，一个正面卡片的动画，一个背面卡片的动画；
+- 创建一个动画实例animation;   <font color="#00dd00">this.animation = wx.createAnimation({})</font>
+- 调用实例中的方法来描述动画;  <font color="#00dd00">this.animation.rotateY(180).step()</font> 
+- 通过动画实例的export方法输出动画；  <font color="#00dd00">this.animation.rotateY(180).step().export()</font> 
 
