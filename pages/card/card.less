@@ -1,0 +1,32 @@
+.main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 10rpx auto;
+	width: 600rpx;
+	height: 400rpx;
+	.card {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all 1s;
+		backface-visibility: hidden;
+		width: 600rpx;
+		height: 400rpx;
+		border-radius: 20rpx;
+		border: 2rpx solid red;
+		&.card1 {
+			// background: pink;
+		}
+		&.card2 {
+			transform: rotateY(-180deg);
+		}
+		image {
+			width: 600rpx;
+			height: 400rpx;
+			border-radius: 20rpx;
+		}
+	}
+}

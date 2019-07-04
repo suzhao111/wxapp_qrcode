@@ -1,6 +1,6 @@
 <!--pages/main/index.wxml-->
-<view class="container-box">
-    图片方式
+<view class="container">
+    <text name="" id="" cols="30" rows="10">image展示</text>
     <view class="img-box">
         <image bindtap="previewImg" mode="widthFix" src="{{imagePath}}"></image>
     </view>
@@ -11,17 +11,20 @@
         </view>
         <button formType="submit" class="mybtn" type="primary">生成二维码</button>
     </form> -->
+
+    <text name="" id="" cols="30" rows="10">canvas展示</text>
+    <view class="canvas-box">
+      <canvas style="width: 300rpx;height: 300rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+      <!-- <canvas  hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/> -->
+    </view>
+
+    <view class="btns">
+      <button type="primary" size="mini" bindtap="manuRefresh">手动刷新</button>
+      <button type="primary" size="mini" bindtap="stopRefresh">停止刷新</button>
+    </view>
+    <view class="tip">当前：{{tip}}</view>
 </view>
 <!-- <view hidden="{{maskHidden}}" class="mask"></view> -->
 
-canvas方式
-<view class="canvas-box">
-  <canvas style="width: 300rpx;height: 300rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
-  <!-- <canvas  hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/> -->
-</view>
 
-<view class="btns">
-  <button type="primary" bindtap="manuRefresh">手动刷新二维码</button>
-  <button type="primary" bindtap="stopRefresh">停止自动刷新二维码</button>
-</view>
 

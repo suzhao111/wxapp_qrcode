@@ -1,36 +1,29 @@
-/* pages/card/card.wxss */
 .main {
   position: absolute;
-  top:0;
-  left:0;
-  right:0;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
   margin: 10rpx auto;
   width: 600rpx;
   height: 400rpx;
 }
-.card {
+.main .card {
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   transition: all 1s;
-  /* 不显示背面 */
   backface-visibility: hidden;
   width: 600rpx;
   height: 400rpx;
-  border-radius: 10rpx;
-  cursor: pointer;
+  border-radius: 20rpx;
   border: 2rpx solid red;
 }
-.card1 {
-  /* background: pink; */
+.main .card.card2 {
+  transform: rotateY(-180deg);
 }
-.card2 {
-  /* background: yellow; */
-  /* 默认显示正面 */
-  transform: rotateY(-180deg); 
-}
-.card image {
+.main .card image {
   width: 600rpx;
   height: 400rpx;
+  border-radius: 20rpx;
 }

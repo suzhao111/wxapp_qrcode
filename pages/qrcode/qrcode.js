@@ -5,7 +5,10 @@ Page({
   data: {
     imagePath: '',
     // 存储定时器
-    setInter:''
+    setInter:'',
+    tip: 'null',
+    st: null,  //记录每次自动刷新的开始时间
+    expireTime: 20,  //过期时间，这里设置为20秒
   },
   onLoad: function (options) {
     var size = this.setCanvasSize();//动态设置画布大小
@@ -35,17 +38,30 @@ Page({
 
   // 生成二维码
   createQrCode: function (canvasId, cavW, cavH) {
+    let that = this
     let ct = Date.parse(new Date())
-    let url = 'current_time=' + ct
-    console.log('当前生成时间是。。。。', ct)
-    //调用插件中的draw方法，绘制二维码图片
-    QR.api.draw(url, canvasId, cavW, cavH);
-    setTimeout(() => { this.canvasToTempImage(); }, 500);
+    if ((ct - that.data.st) > that.data.expireTime * 1000 ) { //超时，停止刷新
+      this.setData({
+        tip: that.data.expireTime + '秒超时，停止刷新'
+      })
+      clearInterval(that.data.setInter)
+    } else {
+      let url = 'current_time=' + ct
+      console.log('当前生成时间是。。。。', ct)
+      //调用插件中的draw方法，绘制二维码图片
+      QR.api.draw(url, canvasId, cavW, cavH);
+      setTimeout(() => { this.canvasToTempImage(); }, 500);
+    }
+    
   },
 
   // 自动刷新二维码，5秒刷新一次，先生成一次，再5秒后执行一次
 autoRefresh: function() {
   let that = this;
+  that.setData({
+    st: Date.parse(new Date()),
+    tip: '正在刷新'
+  })
   let size = that.setCanvasSize();//动态设置画布大小
   that.createQrCode("mycanvas", size.w, size.h) //先生成一次
   that.data.setInter = setInterval(function () {
@@ -56,6 +72,9 @@ autoRefresh: function() {
   // 取消自动刷新
   stopRefresh: function() {
     let that = this
+    this.setData({
+      tip: '已停止自动刷新'
+    })
     console.log('点击取消自动刷新')
     clearInterval(that.data.setInter)
   },
