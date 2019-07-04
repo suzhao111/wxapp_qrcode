@@ -1,14 +1,31 @@
-.img-box {
+.container {
+  background: #cccccc;
+  opacity: 0.9;
+  height: 100vh;
+}
+.container text {
+  font-size: 36rpx;
+  color: #333;
+  margin: 30rpx auto 18rpx;
+}
+.container .img-box {
   text-align: center;
 }
-.img-box image {
+.container .img-box image {
   width: 350rpx;
   height: 350rpx;
 }
-canvas {
+.container canvas {
   margin: 0 auto;
 }
-btns {
+.container .btns {
+  margin-top: 50rpx;
+  width: 600rpx;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.container .tip {
+  margin-top: 50rpx;
+  font-size: 36rpx;
+  color: #333;
 }
