@@ -24,4 +24,5 @@ canvas方式
   <button type="primary" bindtap="manuRefresh">手动刷新二维码</button>
   <button type="primary" bindtap="stopRefresh">停止自动刷新二维码</button>
 </view>
+<view>{{tip}}</view>
 
