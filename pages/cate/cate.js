@@ -1,37 +1,16 @@
-// pages/card/card.js
-
+// pages/cate/cate.js
 Page({
 
   /**
    * 页面的初始数据
    */
-
   data: {
-      animation1: null,//正面卡片动画
-      animation2: null,//背面卡片动画
-  },
-  animation: wx.createAnimation({
-    duration: 1000,
-    timingFunction: 'linear'
-  }),
-  
-  rotateFn(e) {
-      let that = this
-      let id = e.currentTarget.dataset.id
-      // 点击正面
-      if(id == 1) {
-          this.setData({
-              animation1: that.animation.rotateY(180).step().export(),
-              animation2: that.animation.rotateY(0).step().export()
-          })
-      } else { //点击反面
-          this.setData({
-              animation1: that.animation.rotateY(0).step().export(),
-              animation2: that.animation.rotateY(180).step().export()
-          })
-      }
+
   },
 
+  /**
+   * 生命周期函数--监听页面加载
+   */
   onLoad: function (options) {
 
   },

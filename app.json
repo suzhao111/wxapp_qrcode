@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/qrcode/qrcode",
-    "pages/card/card"
+    "pages/card/card",
+    "pages/cate/cate"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,5 +12,34 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#333",
+    "backgroundColor": "red",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/qrcode/qrcode",
+        "text": "二维码"
+      },
+      {
+        "pagePath": "pages/card/card",
+        "text": "卡片翻转"
+      },
+      {
+        "pagePath": "pages/cate/cate",
+        "text": "项目"
+      }
+    ]
+  },
+
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要获取您的位置"
+    }
+  }
 }
