@@ -23,3 +23,6 @@
 - 创建一个动画实例animation;   <font color="#00dd00">this.animation = wx.createAnimation({})</font>
 - 调用实例中的方法来描述动画;  <font color="#00dd00">this.animation.rotateY(180).step()</font> 
 - 通过动画实例的export方法输出动画；  <font color="#00dd00">this.animation.rotateY(180).step().export()</font> 
+
+### 3、授权
+见pages/index
